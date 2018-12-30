@@ -10,8 +10,8 @@ export default {
 		return axios.get("/api/points")
 	},
 
-	addPoints: function() {
-		return axios.post("/api/points")
+	addPoints: function(data) {
+		return axios.post("/api/points", data)
 	}
 
 };

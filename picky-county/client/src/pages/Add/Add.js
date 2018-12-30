@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/App.js";
 import TopBar from "../../components/TopBar"
+import $ from "jquery";
 
 class Add extends Component {
 
@@ -26,6 +27,25 @@ class Add extends Component {
         .catch(err => console.log(err));
     };
 
+    addPoints = (event) => {
+      event.preventDefault();
+      const description = $("#description").val().trim();
+      const team = $(".houses").val().trim();
+      const date = new Date();
+      const points = $("#points").val().trim();
+      const user = "Greg";
+      const occasion = "";
+      const data = {
+        description: description,
+        team: team, 
+        date: date,
+        points: points,
+        user: user,
+        event: occasion
+      }
+      API.addPoints(data);
+    }
+
   render() {
     
     return (
@@ -50,7 +70,7 @@ class Add extends Component {
             </div>
 
           {/*Form Bottom*/}
-          <div className="form-bottom">
+            <div className="form-bottom">
               {/*Description Input*/}
               <div className="form-input description">
                 <div className="description-input">
@@ -58,21 +78,16 @@ class Add extends Component {
                   <label className="visually-hidden" htmlFor="description">Description</label>
                   <input id="description" name="description" type="text" />
                 </div>
-                <div className="item-amount-input">
-
+                <div className="item-points-input">
                 {/*Points Input*/}
                   <h4>Points</h4>
                   <label className="visually-hidden"  htmlFor="points">Points</label>
                   <input id="points" name="points" type="text" />
+                </div>
               </div>
-          </div>
-        </div>
-        <div className="form-end">
-           <input type="date"  className="datepicker"/>
-        </div>
-        <div> 
-              <button className="btn" onClick={this.props.submitTransaction}>Submit</button>
-            
+            </div>
+            <div> 
+              <button className="btn" onClick={this.addPoints}>Submit</button> 
             </div>
           </form>
         </main>
