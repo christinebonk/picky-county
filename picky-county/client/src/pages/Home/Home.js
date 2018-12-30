@@ -43,7 +43,7 @@ class Home extends Component {
     
     return (
       <div>
-        <TopBar title="Financial Indepdence Dashboard"/>
+        <TopBar/>
         <main>
           <div className="team-container-header">
             <img src="https://via.placeholder.com/150" />
