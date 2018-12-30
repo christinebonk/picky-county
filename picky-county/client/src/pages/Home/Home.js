@@ -18,6 +18,20 @@ class Home extends Component {
       API.getHouses()
         .then(res => {
          this.setState({houses: res.data}, () => {});
+         this.getPoints();
+        })
+        .catch(err => console.log(err));
+    };
+
+    //retrieve houses data
+    getPoints = () => {  
+      API.getPoints()
+        .then(res => {
+          let houses = this.state.houses;
+          let pointsData = res.data;
+          console.log(pointsData);
+          console.log(houses);
+          // this.setState({houses: res.data}, () => {});
         })
         .catch(err => console.log(err));
     };

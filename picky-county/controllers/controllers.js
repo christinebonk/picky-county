@@ -10,9 +10,15 @@ function routes(app) {
 		res.sendFile(path.join(__dirname, "../client/build/index.html"));
 	});
 
-	//api
+	//apis
 	app.get("/api/houses", function(req,res) {
 		db.Houses.findAll({}).then(function(result) {
+			res.json(result);
+		});
+	});
+
+	app.get("/api/points", function(req,res) {
+		db.Points.findAll({}).then(function(result) {
 			res.json(result);
 		});
 	})

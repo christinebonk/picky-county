@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Points = sequelize.define("Points", {
+    description: {
+      type: DataTypes.STRING(40),
+      allowNull: false
+    },
     team: {
       type: DataTypes.STRING(10),
       allowNull: false

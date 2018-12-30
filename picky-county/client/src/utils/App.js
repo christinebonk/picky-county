@@ -6,4 +6,8 @@ export default {
 		return axios.get("/api/houses")
 	},
 
+	getPoints: function() {
+		return axios.get("/api/points")
+	}
+
 };
