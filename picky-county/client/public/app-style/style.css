@@ -1,4 +1,16 @@
 /*Website Colours*/
+.team-container-header img {
+  max-width: 70px;
+  max-height: 70px; }
+
+.team-container-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; }
+  .team-container-header h2 {
+    font-size: 2rem;
+    margin-left: 20px; }
+
 section.team-container {
   display: flex; }
 
@@ -23,16 +35,15 @@ section.team-container {
   font-size: 1.5rem;
   font-weight: bold; }
 
+main {
+  width: 80%;
+  margin: 0 auto; }
+
 header nav {
   background: #333366;
   margin-bottom: 50px; }
   header nav a.brand-logo {
-    margin-left: 20px; }
-
-.team-container-header {
-  display: flex; }
-  .team-container-header h2 {
-    font-size: 2rem; }
+    margin-left: 40px; }
 
 body {
   font-family: 'Oswald', sans-serif; }

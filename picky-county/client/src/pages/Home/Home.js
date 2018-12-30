@@ -56,7 +56,7 @@ class Home extends Component {
         <TopBar/>
         <main>
           <div className="team-container-header">
-            <img alt="placeholder" src="https://via.placeholder.com/150" />
+            <img alt="pickering college logo" src="/images/logo.png" />
             <h2>Pickering College House Points</h2>
           </div>
           <section className="team-container">

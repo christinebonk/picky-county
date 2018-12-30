@@ -12,7 +12,7 @@ class TopBar extends Component {
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li><a href="/">Home</a></li>
               <li><a href="/feed">Feed</a></li>
-              <li><a href="collapsible.html">JavaScript</a></li>
+              <li><a href="/add">Add Points</a></li>
             </ul>
           </div>
          </nav>     

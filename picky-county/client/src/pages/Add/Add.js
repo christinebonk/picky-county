@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/App.js";
 import TopBar from "../../components/TopBar"
-import Card from "../../components/Card"
 
-class Feed extends Component {
+class Add extends Component {
 
     state = {
       points: []
@@ -30,18 +29,11 @@ class Feed extends Component {
       <div>
         <TopBar/>
         <main>
-          {this.state.points.map((point, index) =>( 
-            <Card 
-              description = {point.description}
-              points = {point.points}
-              team = {point.team}
-              key = {index}
-            />
-            ))}
+
         </main>
       </div>
       );
     }
   }
 
-export default Feed;
+export default Add;

@@ -8,6 +8,10 @@ export default {
 
 	getPoints: function() {
 		return axios.get("/api/points")
+	},
+
+	addPoints: function() {
+		return axios.post("/api/points")
 	}
 
 };
