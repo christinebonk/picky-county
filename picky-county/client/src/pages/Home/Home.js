@@ -27,18 +27,21 @@ class Home extends Component {
         .catch(err => console.log(err));
     };
 
-    //retrieve houses data
+    //retrieve points data
     getPoints = () => {  
       API.getPoints()
         .then(res => {
           let houses = this.state.houses;
           let pointsData = res.data;
-          houses.map(house => {
+          houses.map(house => { //calculate points for each house
             pointsData.forEach(point => {
               if(point.team === house.team) {
                 house.points += point.points;
               }
             });
+          });
+          houses.sort(function(a, b) { //sort array by points
+              return b.points - a.points;
           });
           this.setState({houses: houses}, () => {});
         })
@@ -57,16 +60,16 @@ class Home extends Component {
             <h2>Pickering College House Points</h2>
           </div>
           <section className="team-container">
-            {this.state.houses.map (house => (
+            {this.state.houses.map ((house, index) => (
               <TeamBox 
-                name = {house.team}
+                name = {house.team} 
                 color = {house.color}
                 points = {house.points}
                 ranking = {house.ranking}
                 key = {house.team}
+                index = {index + 1}
               />
               ))
-
             }
           </section>
         </main>

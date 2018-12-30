@@ -6,7 +6,7 @@ class TeamBox extends Component {
 		return (
 			<div className="team-box">
 				<div className="team-box-top" style={{backgroundColor: this.props.color}}>
-					<div className="ranking"># {this.props.ranking}</div>
+					<div className="ranking"># {this.props.index}</div>
 					<h3>{this.props.name}</h3>
 				</div>
 				<div className="team-box-bottom">
