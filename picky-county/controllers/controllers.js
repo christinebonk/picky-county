@@ -6,10 +6,11 @@ const path = require("path");
 
 function routes(app) {
 
-	app.get("/", authenticationMiddleware(), function(req,res) {
+	app.get("/", function(req,res) {
 		res.sendFile(path.join(__dirname, "../client/build/index.html"));
 	});
 	
 	
 }
 
+module.exports = routes;

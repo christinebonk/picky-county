@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import API from "../../utils/App.js";
-import { Col, Row, Container } from "../../components/Grid";
-import { Thead, Table, Tbody } from "../../components/Table";
-import { EmptyBar, FullBar } from "../../components/Bars";
-import $ from "jquery";
-import BarChart from "react-svg-bar-chart"
 import TopBar from "../../components/TopBar"
 import TeamBox from "../../components/TeamBox/"
 
@@ -46,7 +41,7 @@ class Home extends Component {
         <TopBar/>
         <main>
           <div className="team-container-header">
-            <img src="https://via.placeholder.com/150" />
+            <img alt="placeholder" src="https://via.placeholder.com/150" />
             <h2>Pickering College House Points</h2>
           </div>
           <section className="team-container">
@@ -56,6 +51,7 @@ class Home extends Component {
                 color = {house.color}
                 points = {house.points}
                 ranking = {house.ranking}
+                key = {house.name}
               />
               ))
 

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
-import API from "../../utils/App.js";
 
 
 class TopBar extends Component {

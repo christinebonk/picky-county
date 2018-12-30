@@ -1,7 +1,7 @@
 {
-  "name": "final-project",
+  "name": "picky-county",
   "version": "1.0.0",
-  "description": "final project for coding bootcamp",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.18.9"
   }
 }
