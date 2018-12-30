@@ -17,8 +17,12 @@ class Home extends Component {
     getHouses = () => {  
       API.getHouses()
         .then(res => {
-         this.setState({houses: res.data}, () => {});
-         this.getPoints();
+          let houses = res.data;
+          houses.map(house => {
+            house.points = 0
+          }); //add points information to object
+          this.setState({houses: houses}, () => {});
+          this.getPoints();
         })
         .catch(err => console.log(err));
     };
@@ -29,9 +33,14 @@ class Home extends Component {
         .then(res => {
           let houses = this.state.houses;
           let pointsData = res.data;
-          console.log(pointsData);
-          console.log(houses);
-          // this.setState({houses: res.data}, () => {});
+          houses.map(house => {
+            pointsData.forEach(point => {
+              if(point.team === house.team) {
+                house.points += point.points;
+              }
+            });
+          });
+          this.setState({houses: houses}, () => {});
         })
         .catch(err => console.log(err));
     };
