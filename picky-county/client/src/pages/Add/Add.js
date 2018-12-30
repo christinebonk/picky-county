@@ -9,18 +9,6 @@ class Add extends Component {
     }
 
     componentDidMount() {
-      this.getPoints();
-    };
-
-    //retrieve points data
-    getPoints = () => {  
-      API.getPoints()
-        .then(res => {
-          let pointsData = res.data;
-          console.log(pointsData);
-          this.setState({points: pointsData}, () => {});
-        })
-        .catch(err => console.log(err));
     };
 
   render() {
