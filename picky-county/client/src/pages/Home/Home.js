@@ -6,32 +6,21 @@ import TeamBox from "../../components/TeamBox/"
 class Home extends Component {
 
     state = {
-      houses: [{
-        name: "Blue",
-        color: "#006699",
-        points: 100,
-        ranking: 1
-        },
-        {
-          name: "Red",
-          color: "#990033",
-          points: 50,
-          ranking: 2
-        },
-        {
-          name: "Gold",
-          color: "#CCCC99",
-          points: 75,
-          ranking: 3
-        }, {
-          name: "Silver",
-          color: "#CCCCCC",
-          points: 88,
-          ranking: 4
-        }
-
-        ]
+      houses: []
     }
+
+    componentDidMount() {
+      this.getHouses();
+    };
+
+    //retrieve houses data
+    getHouses = () => {  
+      API.getHouses()
+        .then(res => {
+         this.setState({houses: res.data}, () => {});
+        })
+        .catch(err => console.log(err));
+    };
 
 
   render() {
@@ -47,11 +36,11 @@ class Home extends Component {
           <section className="team-container">
             {this.state.houses.map (house => (
               <TeamBox 
-                name = {house.name}
+                name = {house.team}
                 color = {house.color}
                 points = {house.points}
                 ranking = {house.ranking}
-                key = {house.name}
+                key = {house.team}
               />
               ))
 
