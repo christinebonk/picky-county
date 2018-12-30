@@ -23,14 +23,11 @@ section.team-container {
   font-size: 1.5rem;
   font-weight: bold; }
 
-.top-bar {
+header nav {
   background: #333366;
-  color: white;
   margin-bottom: 50px; }
-  .top-bar h1 {
-    margin: 0;
-    padding: 20px;
-    font-size: 2rem; }
+  header nav a.brand-logo {
+    margin-left: 20px; }
 
 .team-container-header {
   display: flex; }

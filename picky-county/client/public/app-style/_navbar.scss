@@ -1,16 +1,15 @@
-.top-bar {
-	background: #333366;
-	color: white;
-	margin-bottom: 50px;
-	
 
-	h1 {
-		margin: 0;
-		padding: 20px;
-		font-size: 2rem;
+
+header nav {
+	background: #333366;
+	margin-bottom: 50px;
+
+	a.brand-logo {
+		margin-left: 20px;
 	}
 }
 
+//team box header
 .team-container-header {
 	display: flex;
 
