@@ -16,6 +16,10 @@ export default {
 
 	addHouse: function(data) {
 		return axios.post("/api/houses", data)
-	}
+	},
+
+	deleteHouse: function(id) {
+		return axios.delete("/api/houses/" + id)
+	},
 
 };

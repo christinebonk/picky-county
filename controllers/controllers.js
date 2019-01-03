@@ -24,6 +24,16 @@ function routes(app) {
 		});
 	});
 
+	app.delete("/api/houses/:id", function(req, res) {
+		var id = req.params.id;
+		db.Houses.destroy({where: {id:id}
+		}).then(function(result) {
+			res.json(result);
+		}).catch(function(err) {
+			if (err) {console.log(err)};
+		});
+	});
+
 	app.get("/api/points", function(req,res) {
 		db.Points.findAll({}).then(function(result) {
 			res.json(result);

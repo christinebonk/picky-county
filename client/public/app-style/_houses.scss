@@ -1,0 +1,21 @@
+.houses-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.display-house {
+	width: 20%;
+}
+
+.display-house-top {
+	padding: 20px;
+	border-radius: 10px;
+	margin: 5px;
+	text-align: center;
+	transition: 0.3 border ease;
+
+
+		h3 {
+			margin: 0;
+		}
+}
