@@ -17,6 +17,17 @@ function routes(app) {
 		});
 	});
 
+	app.post("/api/houses", function(req,res) {
+		var team = req.body.team;
+		var color = req.body.color;
+		db.Houses.create({
+			team: team,
+			color: color
+		}).then(function(result) {
+			res.json("complete");
+		});
+	});
+
 	app.get("/api/points", function(req,res) {
 		db.Points.findAll({}).then(function(result) {
 			res.json(result);

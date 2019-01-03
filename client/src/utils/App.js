@@ -12,6 +12,10 @@ export default {
 
 	addPoints: function(data) {
 		return axios.post("/api/points", data)
+	},
+
+	addHouse: function(data) {
+		return axios.post("/api/houses", data)
 	}
 
 };

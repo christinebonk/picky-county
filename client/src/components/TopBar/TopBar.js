@@ -13,6 +13,7 @@ class TopBar extends Component {
               <li><a href="/">Home</a></li>
               <li><a href="/feed">Feed</a></li>
               <li><a href="/add">Add Points</a></li>
+              <li><a href="/houses">Manage Houses</a></li>
             </ul>
           </div>
          </nav>     
