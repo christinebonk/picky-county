@@ -6,7 +6,7 @@ import $ from "jquery";
 class Houses extends Component {
 
     state = {
-      houses: []
+      house: []
     }
 
     componentDidMount() {
@@ -17,9 +17,9 @@ class Houses extends Component {
     getHouses = () => {  
       API.getHouses()
         .then(res => {
-          let houses = res.data;
-          console.log(houses);
-          this.setState({houses: houses}, () => {});
+          let house = res.data;
+          console.log(house);
+          this.setState({house: house}, () => {});
         })
         .catch(err => console.log(err));
     };

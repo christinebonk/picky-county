@@ -5,11 +5,7 @@ const path = require("path");
 
 
 function routes(app) {
-	//pages
-	app.get("/*", function(req,res) {
-		res.sendFile(path.join(__dirname, "../client/build/index.html"));
-	});
-
+	
 	//apis
 	app.get("/api/houses", function(req,res) {
 		db.Houses.findAll({}).then(function(result) {
@@ -52,6 +48,12 @@ function routes(app) {
 			res.json("complete");
 		});
 	});
+
+	//pages
+	app.get("/*", function(req,res) {
+		res.sendFile(path.join(__dirname, "../client/build/index.html"));
+	});
+
 }
 
 module.exports = routes;
