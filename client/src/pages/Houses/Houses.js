@@ -90,7 +90,7 @@ class Houses extends Component {
                   <div className="house-colour-input">
                     <h4>House Colour</h4>
                     <label className="visually-hidden" htmlFor="house-colour">Description</label>
-                    <input id="house-colour" name="house-colour" type="text" />
+                    <input id="house-colour" placeholder="Input hex colour including #" name="house-colour" type="text" />
                   </div>
                 </div>
               </div>
